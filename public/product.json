@@ -3,11 +3,18 @@
             "id": 1,
             "title": "LG 126 cms (50 inches) 4K Ultra HD Smart LED TV 50UM7700PTA | with Built-in Alexa (Ceramic Black)",
             "price": 60000,
-            "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sathya.in%2Fvivo-s1-pro-black8gb-ram-128gb-storage&psig=AOvVaw2HanNJcHsQC5XLOGgANfHt&ust=1620383469031000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCBw_nstPACFQAAAAAdAAAAABAI"
+            "image": "https://images-na.ssl-images-amazon.com/images/I/91y%2BVBZZdTL._AC_SX355_.jpg"
         },
         {
             "id": 2,
             "title": "Samsung M31",
-            "price": 12999
+            "price": 12999,
+            "image": "https://static.digit.in/default/db80c6f12355307b593c0af60ad5403adbd2ab06.jpeg?tr=1200"
+        },
+        {
+            "id": 3,
+            "title": "Mi Note 4",
+            "price": 11999,
+            "image": "https://www.gizmochina.com/wp-content/uploads/2016/09/redmi-note-4-featured-e1473134057642-600x600.png"
         }
 ]

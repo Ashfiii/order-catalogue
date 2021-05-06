@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
@@ -8,21 +9,65 @@ import Payment from './components/Payment';
 
 function App() {
 
+  const [data,setData]= useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchParam, setsearchParam] = useState('');
+
+  const getData=()=>{
+     fetch('product.json',
+     {
+       headers : { 
+         'Content-Type': 'application/json',
+         'Accept': 'application/json'
+        }
+     })
+       .then(function(response){
+         //console.log(response)
+         return response.json();
+       })
+       .then(function(myJson) {
+         console.log(myJson);
+         setData(myJson)
+       }
+     );
+     
+   }
+
+   useEffect(()=>{
+     getData()
+   },[])
+
+   const filterSearch = (filteredList, param)=>{
+     
+      setFilteredData(filteredList);
+      setsearchParam(param);
+      console.log('searchParam',searchParam.length);
+      console.log('filrer', filteredData);
+     
+   }
+
+  const getSearchData = () => {
+     console.log(searchParam.length);
+     console.log('app',searchParam.length===0 ? data:filteredData);
+     return searchParam.length===0 ? data:filteredData
+     
+   }
+
   return (
     
       <div className="app">
         <Router>
             <Switch>
               <Route path="/checkout">
-                <Header />
+                <Header data={data} filterSearch={filterSearch}/>
                 <Checkout />
               </Route>
               <Route path="/payment">
                 <Payment />
               </Route>
               <Route exact path="/">
-                <Header />
-                <Home />
+                <Header data={data} filterSearch={filterSearch}/>
+                <Home data={getSearchData()}/>
               </Route>
             </Switch>
           </Router>
