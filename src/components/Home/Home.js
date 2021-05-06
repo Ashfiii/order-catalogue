@@ -22,7 +22,7 @@ function Home({data}) {
             <div className="home__row">
                 
                 {data.map((item)=>
-                    <Product id={item.id} title={item.title} price={item.price} image={item.image}/>
+                    <Product id={item.id} title={item.title} price={item.price} image={item.image} category={item.category}/>
                
                 )}
                 

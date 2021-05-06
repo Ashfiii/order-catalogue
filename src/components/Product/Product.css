@@ -35,6 +35,11 @@
 .product__info{
     margin-bottom: 10px;
 }
+.product__category{
+    font-size: 14px;
+    margin-top: 5px;
+    color: gray;
+}
 .product:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px 12px lightgray;

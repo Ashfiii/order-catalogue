@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Product.css';
 import {useDispatch} from 'react-redux';
 
-function Product({id, title, price, image}) {
+function Product({id, title, price, image, category}) {
 
      const dispatch = useDispatch();
 
@@ -14,6 +14,7 @@ function Product({id, title, price, image}) {
                 title: title,
                 price: price,
                 image: image,
+                category: category
             }
         })
     }
@@ -25,6 +26,7 @@ function Product({id, title, price, image}) {
                 <p className="product__price">
                     Rs <strong>{price}</strong>
                 </p>
+                <p className="product__category">{category}</p>
             </div>
             <img src={image} alt="ProductImage"/>
             <button onClick={addToCart}>Add to Cart</button>
