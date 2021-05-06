@@ -4,7 +4,8 @@ import Header from './components/Header/Header';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
-import Payment from './components/Payment';
+import Payment from './components/Payment/Payment';
+import Order from './components/Order';
 
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
               </Route>
               <Route path="/payment">
                 <Payment />
+              </Route>
+              <Route path="/orderconfirm">
+                <Order />
               </Route>
               <Route exact path="/">
                 <Header data={data} filterSearch={filterSearch}/>
