@@ -10,6 +10,8 @@ function Home({data}) {
         return result.category === selectedcategory;       
     });
 
+    //console.log(filterDropdown);
+
     return (
 
         <>
