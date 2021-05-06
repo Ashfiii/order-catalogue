@@ -4,7 +4,6 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from 'react-router-dom';
 import './Header.css';
 import { useSelector } from 'react-redux';
-// import jsonData from '../../../public/product.json';
 
 function Header({data, filterSearch}) {
 
@@ -13,19 +12,13 @@ function Header({data, filterSearch}) {
     const cartArrr= useSelector(
         (state) => state.carts.cartData
       );
-      //console.log(cartArrr);
 
        const filterFunc =(e)=>{
         setSearchTerm(e.target.value);
-        //console.log('é',e.target.value);
-        console.log('search',searchTerm);
         let filteredList = data.filter(item =>{
-
             return item.title.toLowerCase().includes(searchTerm.toLowerCase());
         })
-        console.log('filteredList',filteredList)
         filterSearch(filteredList, searchTerm);
-        
        }
 
     return (

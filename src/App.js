@@ -22,15 +22,12 @@ function App() {
         }
      })
        .then(function(response){
-         //console.log(response)
          return response.json();
        })
        .then(function(myJson) {
-         console.log(myJson);
          setData(myJson)
        }
      );
-     
    }
 
    useEffect(()=>{
@@ -38,24 +35,16 @@ function App() {
    },[])
 
    const filterSearch = (filteredList, param)=>{
-     
-      setFilteredData(filteredList);
+     setFilteredData(filteredList);
       setsearchParam(param);
-      console.log('searchParam',searchParam.length);
-      console.log('filrer', filteredData);
-     
    }
 
   const getSearchData = () => {
-     console.log(searchParam.length);
-     console.log('app',searchParam.length===0 ? data:filteredData);
      return searchParam.length===0 ? data:filteredData
-     
-   }
+  }
 
   return (
-    
-      <div className="app">
+    <div className="app">
         <Router>
             <Switch>
               <Route path="/checkout">
@@ -72,8 +61,6 @@ function App() {
             </Switch>
           </Router>
       </div>
-    
-    
   );
 }
 
