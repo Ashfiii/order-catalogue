@@ -30,6 +30,7 @@ function Home({data}) {
 
         <div className="home">
             <div className="home__row">
+                {/* For viewing all the products add a ! operator before filterDropdown */}
                 {filterDropdown ?  
                 filterDropdown.map(selectedCategory => (
                     <Product 
