@@ -7,6 +7,12 @@
     z-index: 999;
     background-color: #131921;
 }
+.header__logo{
+    margin-left: 20px;
+}
+.header__logo>a{
+    color: white;
+}
 .header__search{
     display: flex;
     align-items: center;

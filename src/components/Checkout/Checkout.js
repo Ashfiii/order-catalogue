@@ -17,7 +17,7 @@ function Checkout() {
             <h2 className="checkout__title">Shopping Cart</h2>
             <div className="checkout__total">
                 <p><strong>Subtotal ({cartArrr.length} items): {getCartTotal(cartArrr)}</strong></p>
-                {cartArrr.length===0 ? <button className="hideButton">Proceed to Checkout</button> :
+                {cartArrr.length===0 ? <button className="hideButton"></button> :
                 <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>}
             </div>
             <div className="checkout__info">

@@ -23,6 +23,7 @@ function Header({data, filterSearch}) {
 
     return (
         <div className="header">
+            <div className="header__logo"><Link to ="/">LOGO</Link></div>
             <div className="header__search">
                 <input 
                 className="header__searchInput" 

@@ -33,7 +33,8 @@ function Payment() {
                     </div>
                 </div>
                 <div className="button__container">
-                    <button><Link to="/orderconfirm">Place Order</Link></button>
+                {cartArrr.length===0 ? <button className="hideButton"></button>:
+                    <button><Link to="/orderconfirm">Place Order</Link></button>}
                 </div>
                 
             </div>

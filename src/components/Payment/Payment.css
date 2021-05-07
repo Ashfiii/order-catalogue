@@ -38,6 +38,9 @@
 .button__container>button>a{
     color: #111;
 }
+.hideButton{
+    display: none;
+}
 
 @media only screen and (max-width:768px){
     .payment__section{

@@ -14,7 +14,7 @@ export const getCartTotal = (cartData)=>{
 const reducer = (state=initialState, action) =>{
     switch (action.type){
         case 'ADD_TO_CART':
-            console.log(action);
+            //console.log(action);
             return {
                 ...state,
                 cartData: [...state.cartData , action.item] 
