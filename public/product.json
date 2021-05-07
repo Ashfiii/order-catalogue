@@ -1,23 +1,37 @@
 [
-        {
-            "id": 1,
-            "title": "Tshirts",
-            "price": 599,
-            "image": "https://www.mydesignation.com/wp-content/uploads/2019/03/shammi-tshirt-image-unisex-mydesignation-.jpg",
-            "category": "Clothing"
-        },
-        {
-            "id": 2,
-            "title": "Samsung M31",
-            "price": 12999,
-            "image": "https://static.digit.in/default/db80c6f12355307b593c0af60ad5403adbd2ab06.jpeg?tr=1200",
-            "category": "Electronics"
-        },
-        {
-            "id": 3,
-            "title": "Food Combo",
-            "price": 499,
-            "image": "https://lh3.googleusercontent.com/proxy/3YCsw9sz5nqb1OcXCFIZpYyU8XxAtdPg7yVpTgm6Tq0xJ1y6jpdLI910c0gfCKyF_vCqt7RjOuGQhgO5USdRutIGOopxB-QtnunoRuGvk-PTIkjprAqlovt1oT6Q",
-            "category": "Food and Beverages"
-        }
+    {
+        "id": 1,
+        "title": "Tshirts",
+        "price": 599,
+        "image": "https://www.mydesignation.com/wp-content/uploads/2019/03/shammi-tshirt-image-unisex-mydesignation-.jpg",
+        "group": {"category": "Clothing", "id": 1}
+    },
+    {
+        "id": 2,
+        "title": "Samsung M31",
+        "price": 12999,
+        "image": "https://static.digit.in/default/db80c6f12355307b593c0af60ad5403adbd2ab06.jpeg?tr=1200",
+        "group": {"category": "Electronics", "id": 2}
+    },
+    {
+        "id": 3,
+        "title": "Food Combo",
+        "price": 499,
+        "image": "https://lh3.googleusercontent.com/proxy/3YCsw9sz5nqb1OcXCFIZpYyU8XxAtdPg7yVpTgm6Tq0xJ1y6jpdLI910c0gfCKyF_vCqt7RjOuGQhgO5USdRutIGOopxB-QtnunoRuGvk-PTIkjprAqlovt1oT6Q",
+        "group": {"category": "Food and Beverages", "id": 3}
+    },
+    {
+        "id": 1,
+        "title": "Shirts",
+        "price": 799,
+        "image": "https://cf.fgroup.workers.dev/bf/resize?key=300x400/50013954283NAVY_default_super_zoom_image_a9c6c85c0140428fad72a24641fe8af6.jpg",
+        "group": {"category": "Clothing", "id": 1}
+    },
+    {
+        "id": 2,
+        "title": "Realme 7",
+        "price": 16999,
+        "image": "https://fdn.gsmarena.com/imgroot/reviews/20/realme-7/lifestyle/-1200w5/gsmarena_012.jpg",
+        "group": {"category": "Electronics", "id": 2}
+    }
 ]

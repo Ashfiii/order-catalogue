@@ -4,27 +4,38 @@ import Product from '../Product/Product';
 
 function Home({data}) {
 
-    const [selectedcategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
+
+    // const categoryOptions = new Map([
+    //   ...data.map(dataItem => [dataItem.group.id, dataItem.group.category])
+    // ]);
 
     const filterDropdown = data.filter(result =>{
-        return result.category === selectedcategory;       
-    });
-
-    //console.log(filterDropdown);
+        return result.group.category === selectedCategory;       
+    }); 
+    
+    //console.log(selectedCategory);
+    console.log(filterDropdown);
 
     return (
 
         <>
         <div className="dropdown">
             <select
-              value={selectedcategory}
+              value={selectedCategory}
               onChange={(e)=>{setSelectedCategory(e.target.value)}}
             >
+              {/* {[...categoryOptions].map(([id,category]) => (
+                <option value={id}>
+                  {category}
+                </option>
+                ))} */}
               {data.map(categoryItem => (
-                <option value={categoryItem.category}>
-                  {categoryItem.category}
+                <option value={categoryItem.group.category}>
+                  {categoryItem.group.category}
                 </option>
               ))}
+
             </select>
         </div>
 
@@ -38,7 +49,7 @@ function Home({data}) {
                     title={selectedCategory.title} 
                     price={selectedCategory.price} 
                     image={selectedCategory.image} 
-                    category={selectedCategory.category}/>
+                    category={selectedCategory.group.category}/>
                 ))
                 :
                     data.map((item)=>
@@ -47,7 +58,7 @@ function Home({data}) {
                     title={item.title} 
                     price={item.price} 
                     image={item.image} 
-                    category={item.category}/>
+                    category={item.group.category}/>
                 )} 
                 
             </div>
