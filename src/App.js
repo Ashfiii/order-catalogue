@@ -53,6 +53,7 @@ function App() {
                 <Checkout />
               </Route>
               <Route path="/payment">
+              <Header data={data} filterSearch={filterSearch}/>
                 <Payment />
               </Route>
               <Route path="/orderconfirm">
