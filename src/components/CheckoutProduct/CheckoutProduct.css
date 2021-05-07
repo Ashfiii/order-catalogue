@@ -1,6 +1,6 @@
 .checkoutProduct{
     display: flex;
-    margin: 0 10px 20px 10px;
+    margin: 0 80px 20px 80px;
     background-color: #f3f3f3;
     border: 1px solid lightgray;
     box-shadow: 6px 6px 10px lightgray;
@@ -34,4 +34,10 @@
 }
 .checkoutProduct__info>button:hover{
     background: #f3be39;
+}
+
+@media only screen and (max-width: 768px){
+    .checkoutProduct{
+        margin: 0 20px 20px 20px;
+    }
 }
