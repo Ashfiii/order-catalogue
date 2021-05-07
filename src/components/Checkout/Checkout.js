@@ -14,9 +14,15 @@ function Checkout() {
 
     return (
         <div className="checkout">
-            <div className="checkout__left">
+            <h2 className="checkout__title">Shopping Cart</h2>
+            <div className="checkout__total">
+                <p>Subtotal ({cartArrr.length} items): <strong>{getCartTotal(cartArrr)}</strong></p>
+                {cartArrr.length===0 ? <button className="hideButton">Proceed to Checkout</button> :
+                <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>}
+            </div>
+            <div className="checkout__info">
                 <div>
-                    <h2 className="checkout__title">Shopping Cart</h2>
+                    
                     {cartArrr.length===0 ? <h2 className="checkout__header">No Items in the Cart</h2>: 
                     cartArrr.map(item =>(
                         <CheckoutProduct 
@@ -28,11 +34,7 @@ function Checkout() {
                     ))}
                 </div>
             </div>
-            <div className="checkout__right">
-                <p>Subtotal ({cartArrr.length} items): <strong>{getCartTotal(cartArrr)}</strong></p>
-                {cartArrr.length===0 ? <button className="hideButton">Proceed to Checkout</button> :
-                <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>}
-            </div>
+            
         </div>
     )
 }

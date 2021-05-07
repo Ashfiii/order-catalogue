@@ -21,21 +21,29 @@ function Home({data}) {
 
         <>
         <div className="dropdown">
-            <select
+            {/* <select
               value={selectedCategory}
               onChange={(e)=>{setSelectedCategory(e.target.value)}}
-            >
+            > */}
               {/* {[...categoryOptions].map(([id,category]) => (
                 <option value={id}>
                   {category}
                 </option>
                 ))} */}
-              {data.map(categoryItem => (
+              {/* {data.map(categoryItem => (
                 <option value={categoryItem.group.category}>
                   {categoryItem.group.category}
                 </option>
               ))}
 
+            </select> */}
+             <select
+              value={selectedCategory}
+              onChange={(e)=>{setSelectedCategory(e.target.value)}}
+            >
+              <option>Clothing</option>
+              <option>Food and Beverages</option>
+              <option>Electronics</option>
             </select>
         </div>
 

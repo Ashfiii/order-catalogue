@@ -2,23 +2,25 @@
     display: flex;
     background-color: white;
     height: 100%;
+    flex-direction: column;
 }
 .checkout__header{
     margin:20px;
 }
 .checkout__title{
-    margin: 0 10px 20px 10px;
+    margin: 0 10px 10px 10px;
     border-bottom: 1px solid lightgray;
     padding: 10px;
 }
-.checkout__left{
+.checkout__info{
     flex: 0.8
 }
-.checkout__right{
+.checkout__total{
     padding: 10px;
-    flex: 0.2
+    flex: 0.2;
+    margin: 10px 10px;
 }
-.checkout__right>button{
+.checkout__total>button{
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
@@ -34,3 +36,11 @@
     display: none;
 }
 
+@media only screen and (max-width:768px){
+    .checkout{
+        flex-direction: column;
+    }
+    .checkout__info{
+        flex: 1;
+    }
+}
