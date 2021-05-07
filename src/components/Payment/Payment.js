@@ -18,15 +18,6 @@ function Payment() {
             <div className="payment__container">
                 <div className="payment__section">
                     <div className="payment__title">
-                        <h3>Delivery Address</h3>
-                    </div>
-                    <div className="payment__address">
-                        <p>Resaldar Nagar, Ranchi</p>
-                        <p>Jharkhand, India</p>
-                    </div>
-                </div>
-                <div className="payment__section">
-                    <div className="payment__title">
                         <h3>Review Items and Delivery</h3>
                     </div>
                     <div className="payment__items">
