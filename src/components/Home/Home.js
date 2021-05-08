@@ -6,6 +6,10 @@ function Home({data}) {
 
     const [selectedCategory, setSelectedCategory] = useState('');
 
+    const categoryOptions = new Map([
+      ...data.map(dataItem => [dataItem.group.id, dataItem.group.category])
+    ]);
+
     const filterDropdown = data.filter(result =>{
         return result.group.category === selectedCategory;       
     }); 
@@ -14,7 +18,7 @@ function Home({data}) {
 
         <>
         <div className="dropdown">
-            <select
+             <select
               value={selectedCategory}
               onChange={(e)=>{setSelectedCategory(e.target.value)}}
             >
