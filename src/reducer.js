@@ -1,5 +1,6 @@
 export const initialState = {
-    cartData : []
+    cartData : [],
+    jsonData: []
 }
 
 export const getCartTotal = (cartData)=>{
@@ -11,10 +12,16 @@ export const getCartTotal = (cartData)=>{
     }
     
 
-const reducer = (state=initialState, action) =>{
+const cartReducers = (state=initialState, action) =>{
     switch (action.type){
+        case 'GET_DATA':
+            return{
+                ...state,
+                jsonData: action.payload
+            }
+
         case 'ADD_TO_CART':
-            //console.log(action);
+            console.log(action);
             return {
                 ...state,
                 cartData: [...state.cartData , action.item] 
@@ -39,4 +46,17 @@ const reducer = (state=initialState, action) =>{
     }
 }
 
-export default reducer;
+const jsonDataReducers = (state=initialState, action) =>{
+    switch (action.type){
+        case 'ADD_DATA':
+            return{
+                ...state,
+                jsonData: [...state.jsonData , action.dataItems]
+            }
+        
+        default :
+            return state;
+    }
+}
+
+export {cartReducers, jsonDataReducers};

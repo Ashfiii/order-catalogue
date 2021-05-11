@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import Payment from './components/Payment/Payment';
 import Order from './components/Order';
+import { useDispatch } from 'react-redux';
 
 
 function App() {
@@ -13,6 +14,11 @@ function App() {
   const [data,setData]= useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchParam, setsearchParam] = useState('');
+
+  console.log('app.js',data);
+
+  const dispatch = useDispatch;
+
 
   const getData=()=>{
      fetch('product.json',
@@ -32,7 +38,8 @@ function App() {
    }
 
    useEffect(()=>{
-     getData()
+     getData();
+     addData();
    },[])
 
    const filterSearch = (filteredList, param)=>{
@@ -49,19 +56,19 @@ function App() {
         <Router>
             <Switch>
               <Route path="/checkout">
-                <Header data={data} filterSearch={filterSearch}/>
+                <Header filterSearch={filterSearch}/>
                 <Checkout />
               </Route>
               <Route path="/payment">
-              <Header data={data} filterSearch={filterSearch}/>
+              <Header filterSearch={filterSearch}/>
                 <Payment />
               </Route>
               <Route path="/orderconfirm">
                 <Order />
               </Route>
               <Route exact path="/">
-                <Header data={data} filterSearch={filterSearch}/>
-                <Home data={getSearchData()}/>
+                <Header filterSearch={filterSearch}/>
+                <Home searchData={getSearchData()}/>
               </Route>
             </Switch>
           </Router>

@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 
 function Product({id, title, price, image, category}) {
 
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const addToCart = () =>{
         dispatch({

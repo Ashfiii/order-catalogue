@@ -5,12 +5,16 @@ import {Link} from 'react-router-dom';
 import './Header.css';
 import { useSelector } from 'react-redux';
 
-function Header({data, filterSearch}) {
+function Header(filterSearch) {
 
     const [searchTerm, setSearchTerm] = useState('');
 
     const cartArrr= useSelector(
         (state) => state.carts.cartData
+      );
+
+      const data= useSelector(
+        (state) => state.jsonInfo.jsonData
       );
 
        const filterFunc =(e)=>{

@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './Home.css';
 import Product from '../Product/Product';
 
-function Home({data}) {
+function Home({searchData}) {
 
     const [selectedCategory, setSelectedCategory] = useState('');
 
-    const filterDropdown = data.filter(result =>{
+    const filterDropdown = searchData.filter(result =>{
         return result.group.category === selectedCategory;       
     }); 
 
@@ -36,7 +36,7 @@ function Home({data}) {
                     category={selectedCategory.group.category}/>
                 ))
                 :
-                    data.map((item)=>
+                searchData.map((item)=>
                     <Product 
                     id={item.id} 
                     title={item.title} 
