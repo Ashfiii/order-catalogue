@@ -39,7 +39,7 @@ function App() {
 
    useEffect(()=>{
      getData();
-     addData();
+    //  addData();
    },[])
 
    const filterSearch = (filteredList, param)=>{
